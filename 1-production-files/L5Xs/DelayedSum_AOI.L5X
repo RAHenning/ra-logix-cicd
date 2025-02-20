@@ -1,9 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--Add two numbers together and return their value after 2ms.-->
-<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="36.00" TargetName="DelayedSum" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2024-10-29T00:53:59.419Z" ContainsContext="true" ExportDate="Mon Oct 28 21:08:23 2024" ExportOptions="References NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
-<Controller Use="Context" Name="UnitTest_Controller">
-<DataTypes Use="Context">
-</DataTypes>
+<RSLogix5000Content SchemaRevision="1.0" SoftwareRevision="37.00" TargetName="DelayedSum" TargetType="AddOnInstructionDefinition" TargetRevision="1.0 " TargetLastEdited="2024-10-29T00:53:59.419Z" ContainsContext="true" ExportDate="Thu Feb 20 09:34:25 2025" ExportOptions="NoRawData L5KData DecoratedData Context Dependencies ForceProtectedEncoding AllProjDocTrans">
+<Controller Use="Context" Name="ExampleWithCICD_L85E">
 <AddOnInstructionDefinitions Use="Context">
 <AddOnInstructionDefinition Use="Target" Name="DelayedSum" Revision="1.0" ExecutePrescan="false" ExecutePostscan="false" ExecuteEnableInFalse="false" CreatedDate="2024-10-29T00:43:02.297Z" CreatedBy="RA-INT\ASYost" EditedDate="2024-10-29T00:53:59.419Z" EditedBy="RA-INT\ASYost" SoftwareRevision="v36.00"
 >
@@ -22,25 +20,16 @@
 </Description>
 </Parameter>
 <Parameter Name="I_addend1" TagType="Base" DataType="SINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read/Write">
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
 <DefaultData Format="Decorated">
 <DataValue DataType="SINT" Radix="Decimal" Value="0"/>
 </DefaultData>
 </Parameter>
 <Parameter Name="I_addend2" TagType="Base" DataType="INT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read/Write">
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
 <DefaultData Format="Decorated">
 <DataValue DataType="INT" Radix="Decimal" Value="0"/>
 </DefaultData>
 </Parameter>
 <Parameter Name="I_addend3" TagType="Base" DataType="DINT" Usage="Input" Radix="Decimal" Required="true" Visible="true" ExternalAccess="Read/Write">
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
 <DefaultData Format="Decorated">
 <DataValue DataType="DINT" Radix="Decimal" Value="0"/>
 </DefaultData>
@@ -49,9 +38,6 @@
 <Description>
 <![CDATA[total sum of AOI addend inputs]]>
 </Description>
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
 <DefaultData Format="Decorated">
 <DataValue DataType="LINT" Radix="Decimal" Value="0"/>
 </DefaultData>
@@ -60,9 +46,6 @@
 <Description>
 <![CDATA[boolean set to go "high" when sum > 10]]>
 </Description>
-<DefaultData Format="L5K">
-<![CDATA[0]]>
-</DefaultData>
 <DefaultData Format="Decorated">
 <DataValue DataType="BOOL" Radix="Decimal" Value="0"/>
 </DefaultData>
@@ -73,9 +56,6 @@
 <Description>
 <![CDATA[timer to delay the "release" of sum value to AOI output]]>
 </Description>
-<DefaultData Format="L5K">
-<![CDATA[[0,2,0]]]>
-</DefaultData>
 <DefaultData Format="Decorated">
 <Structure DataType="TIMER">
 <DataValueMember Name="PRE" DataType="DINT" Radix="Decimal" Value="2"/>
